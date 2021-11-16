@@ -72,3 +72,13 @@ $ vue add unit-jest
 $ npm install --save-dev @vue/test-utils
 ```
 
+## 테스트 수행
+
+```bash
+# 테스트 수행
+$ npm run test:unit
+```
+
+//TODO
+- watch 옵션 주는법
+- 
