@@ -49,3 +49,21 @@ $ vue --version
 
 vue CLI 로 프로젝트를 생성하는데 단 테스트 도구는 포함하지 않도록 함
 
+```bash
+$ vue create hello-vue
+
+# Default (Vue 3) ([Vue 3] babel, eslint) 선택
+
+$ cd hello-vue
+```
+
+## 기존 vuejs 프로젝트에 Vue Test Utils 설치하기
+
+참고. [https://vue-test-utils.vuejs.org/]
+
+커밋 1회 수행 및 리포지토리를 클린하게 만듬
+
+```bash
+$ vue add unit-jest
+```
+
