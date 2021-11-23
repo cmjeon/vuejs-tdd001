@@ -79,6 +79,7 @@ $ npm install --save-dev @vue/test-utils
 $ npm run test:unit
 ```
 
-//TODO
-- watch 옵션 주는법
-- 
+```bash
+# yarn 에 --watch 옵션으로 테스트를 실행할 수 있음
+$ yarn test:unit --watch
+```
