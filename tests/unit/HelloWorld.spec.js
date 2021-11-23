@@ -9,14 +9,17 @@ describe('HelloWorld.vue', () => {
     })
     expect(wrapper.text()).toMatch(msg)
   })
-})
-
-describe('HelloWorld.vue', () => {
+  it('get data', () => {
+    const wrapper = shallowMount(HelloWorld)
+    const count = wrapper.vm.count
+    console.log('### data', count)
+    expect(count).toBe(0)
+  })
   it('increments counter value on click', async () => {
     const wrapper = shallowMount(HelloWorld)
-    const button = wrapper.find('button')
     const text = wrapper.find('#countMsg')
     expect(text.text()).toContain('Total clicks: 0')
+    const button = wrapper.find('button')
     await button.trigger('click')
     expect(text.text()).toContain('Total clicks: 1')
   })
