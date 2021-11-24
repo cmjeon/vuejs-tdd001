@@ -83,3 +83,7 @@ $ npm run test:unit
 # yarn 에 --watch 옵션으로 테스트를 실행할 수 있음
 $ yarn test:unit --watch
 ```
+
+## 참고 자료들
+
+- [https://vue-test-utils.vuejs.org/guides/using-with-vuex.html](https://vue-test-utils.vuejs.org/guides/using-with-vuex.html)
