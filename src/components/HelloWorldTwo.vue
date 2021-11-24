@@ -2,12 +2,15 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <p>dddd</p>
-    <button @click="count++">Add up</button>
-    <p id="countMsg">Total clicks: {{ count }}</p>
+    <p id="countMsg">{{ dataMsg }}</p>
+    <button @click="add">Add up</button>
+    <button @click="subtract">Subtract down</button>
+    <p id="countMsg">{{ count }}</p>
   </div>
 </template>
 
 <script>
+import { mapGetters, mapMutations } from "vuex";
 export default {
   name: "HelloWorldTwo",
   props: {
@@ -15,8 +18,30 @@ export default {
   },
   data() {
     return {
+      dataMsg: "HelloWorldTwo",
       count: 0,
     };
+  },
+  computed: {
+    ...mapGetters({
+      comCount: "getCount",
+    }),
+  },
+  watch: {
+    comCount() {
+      this.count = this.comCount;
+    },
+  },
+  methods: {
+    ...mapMutations({
+      commitCount: "SET_COUNT",
+    }),
+    add() {
+      this.commitCount(this.count + 1);
+    },
+    subtract() {
+      this.commitCount(this.count - 1);
+    },
   },
 };
 </script>

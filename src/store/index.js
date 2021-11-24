@@ -5,6 +5,7 @@ const store = createStore({
     user: {},
     list: [],
     item: {},
+    count: 0,
   },
   getters: {
     fetchedUser(state) {
@@ -15,6 +16,9 @@ const store = createStore({
     },
     fetchedItem(state) {
       return state.item;
+    },
+    getCount(state) {
+      return state.count;
     }
   },
   mutations: {
@@ -26,7 +30,10 @@ const store = createStore({
     },
     SET_ITEM(state, item) {
       state.item = item;
-    }
+    },
+    SET_COUNT(state, count) {
+      state.count = count;
+    },
   },
   actions: {
 
